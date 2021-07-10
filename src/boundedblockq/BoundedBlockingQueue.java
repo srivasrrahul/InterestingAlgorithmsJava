@@ -40,6 +40,7 @@ class BoundedBlockingQueue {
             }
 
             retValue = m_Queue.pollFirst();
+            m_Full.signal();
             return retValue;
         } finally {
             m_Lock.unlock();
