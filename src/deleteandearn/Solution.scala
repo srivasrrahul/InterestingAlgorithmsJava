@@ -1,0 +1,5 @@
+package deleteandearn
+
+class Solution {
+
+}

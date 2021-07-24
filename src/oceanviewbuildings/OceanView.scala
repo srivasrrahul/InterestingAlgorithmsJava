@@ -1,0 +1,5 @@
+package oceanviewbuildings
+
+class OceanView {
+
+}

@@ -1,0 +1,5 @@
+package authenticationmanager
+
+class AuthenticationManager {
+
+}
