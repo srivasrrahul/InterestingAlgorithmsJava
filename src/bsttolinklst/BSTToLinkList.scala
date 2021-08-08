@@ -1,0 +1,5 @@
+package bsttolinklst
+
+class BSTToLinkList {
+
+}

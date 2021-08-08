@@ -1,0 +1,5 @@
+package SubDomainVisitCount
+
+class SubDomainVisitCount {
+
+}

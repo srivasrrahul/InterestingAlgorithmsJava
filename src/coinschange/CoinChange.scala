@@ -1,0 +1,5 @@
+package coinschange
+
+class CoinChange {
+
+}

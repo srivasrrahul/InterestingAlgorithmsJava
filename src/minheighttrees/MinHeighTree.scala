@@ -1,0 +1,5 @@
+package minheighttrees
+
+class MinHeighTree {
+
+}
