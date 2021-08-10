@@ -1,0 +1,5 @@
+package ProductRLEArr
+
+class RLEArr {
+
+}
