@@ -1,0 +1,5 @@
+package MostFreqElement
+
+class MostFreqElement {
+
+}

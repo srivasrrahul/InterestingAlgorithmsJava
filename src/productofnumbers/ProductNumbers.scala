@@ -1,0 +1,5 @@
+package productofnumbers
+
+class ProductNumbers {
+
+}
