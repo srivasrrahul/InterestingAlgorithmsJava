@@ -1,0 +1,5 @@
+package EncodeDecodeString
+
+class EncodeDecode {
+
+}
