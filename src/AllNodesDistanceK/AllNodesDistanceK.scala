@@ -70,7 +70,7 @@ object Solution {
       }
     }
     val p = path(root,List()).get //target is one of the value as constraint
-    ..println(p)
+    println(p)
     var prev = p.reverse
     while (prev.isEmpty == false) {
       iteratePath(prev,prev.length-1)

@@ -70,7 +70,7 @@
             token.append(s(j))
           }
           case '(' => {
-            if (token.isEmpty == false) {
+            if (token.nonEmpty) {
               postfix.append(Number(token.toString().toInt*factor))
               token.clear()
               factor = 1
@@ -79,7 +79,7 @@
             stack.push(s(j))
           }
           case ')' => {
-            if (token.isEmpty == false) {
+            if (!token.isEmpty) {
               postfix.append(Number(token.toString().toInt*factor))
               token.clear()
               factor = 1
@@ -92,7 +92,7 @@
             stack.pop()
           }
           case ' ' => {
-            if (token.isEmpty == false) {
+            if (!token.isEmpty) {
               postfix.append(Number(token.toString().toInt * factor))
               token.clear()
               factor = 1
@@ -126,7 +126,7 @@
             }
 
 
-            while (stack.isEmpty == false && (precedence(s(j)) <= precedence(stack.top))) {
+            while (!stack.isEmpty && (precedence(s(j)) <= precedence(stack.top))) {
               postfix.append(operandToken(stack.pop()))
             }
 

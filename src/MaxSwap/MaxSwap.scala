@@ -1,4 +1,4 @@
-package scala
+package MaxSwap
 
 import scala.collection.mutable
 
@@ -14,10 +14,13 @@ object Solution {
     val str = new StringBuilder
     str.append(s)
 
+    //println(numberLocations)
+    //println(s)
     var replaced = false
-    for (j <- 0 to str.length() if replaced == false) {
-      val current = str(j).asDigit
-      if (current == numberLocations.last) {
+    for (j <- 0 to s.length()-1 if replaced == false) {
+      val current = s(j).asDigit
+      if (current == numberLocations.last._1) {
+        //println(current + " " + numberLocations.size)
         //continue
         val set = numberLocations.get(current).get
         set.remove(j)
@@ -26,9 +29,10 @@ object Solution {
         }
       }else {
         //replace with first max
+        //println("here " + numberLocations)
         val last = numberLocations.last
         val replaceValu = last._1
-        val replaceIndex = last._2.head
+        val replaceIndex = last._2.last
         val t = str.charAt(j)
 
         str.setCharAt(j,str(replaceIndex))
@@ -43,6 +47,6 @@ object Solution {
   }
 
   def main(args: Array[String]): Unit = {
-    println(maximumSwap(7236))
+    println(maximumSwap(7263))
   }
 }

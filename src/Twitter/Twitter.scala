@@ -33,13 +33,13 @@ class FeedCreator(val accessibleTweets : List[TweetLog]) {
     val pageTokens = new mutable.HashMap[Int,Int]() //user => pageToken
     val sortedLst = new mutable.TreeMap[Int,(Int,Int)]() //tweetime => (tweetID,userID)
     val providers = new mutable.HashMap[Int,TweetLog]()
-    for (log <- accessibleTweets) {
-      val (lst,newPageToken) = log.getTweet(n,-1)
-      lst.foreach(x => sortedLst += ((x._1,x._2)))
-      pageTokens += ((log.userId,newPageToken))
-      pageSize += ((log.userId,sortedLst.size))
-      providers += ((log.userId,log))
-    }
+//    for (log <- accessibleTweets) {
+//      val (lst,newPageToken) = log.getTweet(n,-1)
+//      lst.foreach(x => sortedLst += ((x._1,x._2)))
+//      pageTokens += ((log.userId,newPageToken))
+//      pageSize += ((log.userId,sortedLst.size))
+//      providers += ((log.userId,log))
+//    }
 
      while (retValue.size < n && pageSize.isEmpty == false && sortedLst.size > 0) {
 
